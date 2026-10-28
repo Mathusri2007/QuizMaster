@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JavaScript Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+
+    <!-- Start screen -->
+    <section id="start" class="screen">
+      <h1>JavaScript quiz</h1>
+      <p class="lead">10 multiple-choice questions. You get 20 seconds for each one, and your score is calculated automatically.</p>
+      <p id="best" class="best"></p>
+      <button id="startBtn" class="btn primary">Start quiz</button>
+    </section>
+
+    <!-- Quiz screen -->
+    <section id="quiz" class="screen" hidden>
+      <div class="meta">
+        <span id="counter">Question 1 of 10</span>
+        <span id="time" class="time" role="timer">20s</span>
+      </div>
+      <div class="timebar" aria-hidden="true"><div id="timeFill"></div></div>
+
+      <h2 id="question" class="question"></h2>
+      <ul id="options" class="options"></ul>
+
+      <p id="feedback" class="feedback" aria-live="polite"></p>
+      <div class="actions">
+        <span class="hint">Tip: press 1–4 to answer</span>
+        <button id="nextBtn" class="btn primary" disabled>Next question</button>
+      </div>
+    </section>
+
+    <!-- Result screen -->
+    <section id="result" class="screen" hidden>
+      <h2>Your result</h2>
+      <p class="score"><span id="scoreNum">0</span><span class="of"> / <span id="scoreTotal">10</span></span></p>
+      <p id="scoreMsg" class="lead"></p>
+      <p id="bestResult" class="best"></p>
+      <ol id="review" class="review"></ol>
+      <button id="restartBtn" class="btn primary">Try again</button>
+    </section>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
